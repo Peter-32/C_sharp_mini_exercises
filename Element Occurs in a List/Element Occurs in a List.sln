@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element Occurs in a List", "Element Occurs in a List\Element Occurs in a List.csproj", "{B0781F07-04B4-4E0D-9A2E-EE2C31ED0B3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Element_Occurs_in_a_List_Test", "Element_Occurs_in_a_List_Test\Element_Occurs_in_a_List_Test.csproj", "{CE88D047-CFE1-49D5-BE0A-465F2B036108}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0781F07-04B4-4E0D-9A2E-EE2C31ED0B3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0781F07-04B4-4E0D-9A2E-EE2C31ED0B3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0781F07-04B4-4E0D-9A2E-EE2C31ED0B3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0781F07-04B4-4E0D-9A2E-EE2C31ED0B3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE88D047-CFE1-49D5-BE0A-465F2B036108}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE88D047-CFE1-49D5-BE0A-465F2B036108}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE88D047-CFE1-49D5-BE0A-465F2B036108}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE88D047-CFE1-49D5-BE0A-465F2B036108}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

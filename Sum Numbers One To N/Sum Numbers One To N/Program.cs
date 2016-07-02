@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+// using System.Diagnostics.Contracts;
+
+namespace Sum_Numbers_One_To_N
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ProgramLogic programLogic = new ProgramLogic();
+            programLogic.execute();
+            Console.ReadKey();
+        }
+    }
+    
+    public class ProgramLogic
+    {
+        public int PromptMessageForInt()
+        {
+            // Contract.Ensures(Contract.Result<int>() >= 1);
+            Console.WriteLine("Please enter an integer and the program will sum the numbers 1 to n.");
+            int n = Convert.ToInt32(Console.ReadLine());
+            
+            return n;
+        }
+
+        public int SumNumbersOneToN(int n)
+        {
+            var acc = 0;
+            for (int i = 1; i <= n; i++)
+            {
+                acc += i;
+            }
+            return acc;
+        }
+
+        public void OutputMessage(int acc)
+        {
+            Console.WriteLine("The sum of 1 to n is {0}", acc);
+        }
+
+        public void execute()
+        {
+            var n = PromptMessageForInt();
+            Console.WriteLine(n);
+            var acc = SumNumbersOneToN(n);
+            OutputMessage(acc);
+        }
+
+    }
+
+
+}

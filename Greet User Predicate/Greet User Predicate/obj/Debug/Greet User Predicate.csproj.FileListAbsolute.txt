@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\bin\Debug\Greet User Predicate.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\bin\Debug\Greet User Predicate.exe
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\bin\Debug\Greet User Predicate.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\obj\Debug\Greet User Predicate.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\obj\Debug\Greet User Predicate.exe
+c:\users\peter\documents\visual studio 2015\Projects\Greet User Predicate\Greet User Predicate\obj\Debug\Greet User Predicate.pdb

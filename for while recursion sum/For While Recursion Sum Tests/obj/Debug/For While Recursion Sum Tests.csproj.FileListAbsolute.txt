@@ -1,0 +1,8 @@
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\bin\Debug\For While Recursion Sum Tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\bin\Debug\For While Recursion Sum Tests.pdb
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\bin\Debug\for while recursion sum.exe
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\bin\Debug\for while recursion sum.pdb
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\obj\Debug\For While Recursion Sum Tests.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\obj\Debug\For While Recursion Sum Tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\For While Recursion Sum Tests\obj\Debug\For While Recursion Sum Tests.pdb

@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\bin\Debug\Largest Element in a List.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\bin\Debug\Largest Element in a List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\bin\Debug\Largest Element in a List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\obj\Debug\Largest Element in a List.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\obj\Debug\Largest Element in a List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Largest Element in a List\Largest Element in a List\obj\Debug\Largest Element in a List.pdb

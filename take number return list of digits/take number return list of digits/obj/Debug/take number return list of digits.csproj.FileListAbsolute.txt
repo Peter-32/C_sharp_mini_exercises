@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\bin\Debug\take number return list of digits.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\bin\Debug\take number return list of digits.exe
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\bin\Debug\take number return list of digits.pdb
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\obj\Debug\take number return list of digits.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\obj\Debug\take number return list of digits.exe
+c:\users\peter\documents\visual studio 2015\Projects\take number return list of digits\take number return list of digits\obj\Debug\take number return list of digits.pdb

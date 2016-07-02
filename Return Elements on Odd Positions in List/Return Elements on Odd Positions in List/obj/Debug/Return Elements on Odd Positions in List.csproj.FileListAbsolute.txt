@@ -1,0 +1,5 @@
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Return Elements on Odd Positions in List\bin\Debug\Return Elements on Odd Positions in List.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Return Elements on Odd Positions in List\bin\Debug\Return Elements on Odd Positions in List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Return Elements on Odd Positions in List\bin\Debug\Return Elements on Odd Positions in List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Return Elements on Odd Positions in List\obj\Debug\Return Elements on Odd Positions in List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Return Elements on Odd Positions in List\obj\Debug\Return Elements on Odd Positions in List.pdb

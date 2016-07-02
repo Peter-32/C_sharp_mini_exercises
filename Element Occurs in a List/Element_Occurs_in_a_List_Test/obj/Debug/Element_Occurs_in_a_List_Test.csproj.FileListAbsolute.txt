@@ -1,0 +1,8 @@
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\bin\Debug\Element_Occurs_in_a_List_Test.dll
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\bin\Debug\Element_Occurs_in_a_List_Test.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\bin\Debug\Element Occurs in a List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\bin\Debug\Element Occurs in a List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\obj\Debug\Element_Occurs_in_a_List_Test.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\obj\Debug\Element_Occurs_in_a_List_Test.dll
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element_Occurs_in_a_List_Test\obj\Debug\Element_Occurs_in_a_List_Test.pdb

@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\bin\Debug\merges two sorted lists.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\bin\Debug\merges two sorted lists.exe
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\bin\Debug\merges two sorted lists.pdb
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\obj\Debug\merges two sorted lists.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\obj\Debug\merges two sorted lists.exe
+c:\users\peter\documents\visual studio 2015\Projects\merges two sorted lists\merges two sorted lists\obj\Debug\merges two sorted lists.pdb

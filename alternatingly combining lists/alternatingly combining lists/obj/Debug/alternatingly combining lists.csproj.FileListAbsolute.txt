@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\bin\Debug\alternatingly combining lists.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\bin\Debug\alternatingly combining lists.exe
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\bin\Debug\alternatingly combining lists.pdb
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\obj\Debug\alternatingly combining lists.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\obj\Debug\alternatingly combining lists.exe
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists\obj\Debug\alternatingly combining lists.pdb

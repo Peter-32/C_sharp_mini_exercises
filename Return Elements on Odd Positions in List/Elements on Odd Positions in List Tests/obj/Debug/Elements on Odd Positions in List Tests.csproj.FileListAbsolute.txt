@@ -1,0 +1,8 @@
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\obj\Debug\Elements on Odd Positions in List Tests.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\bin\Debug\Elements on Odd Positions in List Tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\bin\Debug\Elements on Odd Positions in List Tests.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\bin\Debug\Return Elements on Odd Positions in List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\bin\Debug\Return Elements on Odd Positions in List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\obj\Debug\Elements on Odd Positions in List Tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\Return Elements on Odd Positions in List\Elements on Odd Positions in List Tests\obj\Debug\Elements on Odd Positions in List Tests.pdb

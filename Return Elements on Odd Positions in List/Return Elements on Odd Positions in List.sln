@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Return Elements on Odd Positions in List", "Return Elements on Odd Positions in List\Return Elements on Odd Positions in List.csproj", "{E0730485-364F-4140-990B-0FD9B79018B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elements on Odd Positions in List Tests", "Elements on Odd Positions in List Tests\Elements on Odd Positions in List Tests.csproj", "{F06BEEBC-F848-413D-9941-4C7A133E54AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0730485-364F-4140-990B-0FD9B79018B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0730485-364F-4140-990B-0FD9B79018B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0730485-364F-4140-990B-0FD9B79018B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0730485-364F-4140-990B-0FD9B79018B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F06BEEBC-F848-413D-9941-4C7A133E54AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F06BEEBC-F848-413D-9941-4C7A133E54AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F06BEEBC-F848-413D-9941-4C7A133E54AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F06BEEBC-F848-413D-9941-4C7A133E54AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

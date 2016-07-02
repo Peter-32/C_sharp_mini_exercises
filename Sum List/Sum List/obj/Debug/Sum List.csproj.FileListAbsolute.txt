@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\bin\Debug\Sum List.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\bin\Debug\Sum List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\bin\Debug\Sum List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\obj\Debug\Sum List.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\obj\Debug\Sum List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum List\Sum List\obj\Debug\Sum List.pdb

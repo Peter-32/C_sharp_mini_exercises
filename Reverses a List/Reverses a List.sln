@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverses a List", "Reverses a List\Reverses a List.csproj", "{DB326B8E-BE91-404F-9E14-16167314DD78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reverses_a_List_Test", "Reverses_a_List_Test\Reverses_a_List_Test.csproj", "{B52C896A-EB54-4590-9C68-E4B160A61881}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB326B8E-BE91-404F-9E14-16167314DD78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB326B8E-BE91-404F-9E14-16167314DD78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB326B8E-BE91-404F-9E14-16167314DD78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB326B8E-BE91-404F-9E14-16167314DD78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B52C896A-EB54-4590-9C68-E4B160A61881}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B52C896A-EB54-4590-9C68-E4B160A61881}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B52C896A-EB54-4590-9C68-E4B160A61881}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B52C896A-EB54-4590-9C68-E4B160A61881}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

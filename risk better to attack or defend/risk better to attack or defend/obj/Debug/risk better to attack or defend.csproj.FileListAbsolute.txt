@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\bin\Debug\risk better to attack or defend.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\bin\Debug\risk better to attack or defend.exe
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\bin\Debug\risk better to attack or defend.pdb
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\obj\Debug\risk better to attack or defend.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\obj\Debug\risk better to attack or defend.exe
+c:\users\peter\documents\visual studio 2015\Projects\risk better to attack or defend\risk better to attack or defend\obj\Debug\risk better to attack or defend.pdb

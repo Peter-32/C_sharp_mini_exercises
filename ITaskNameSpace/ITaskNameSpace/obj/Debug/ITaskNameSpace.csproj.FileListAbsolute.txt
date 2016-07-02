@@ -1,0 +1,5 @@
+c:\users\peter\documents\visual studio 2015\Projects\ITaskNameSpace\ITaskNameSpace\bin\Debug\ITaskNameSpace.dll
+c:\users\peter\documents\visual studio 2015\Projects\ITaskNameSpace\ITaskNameSpace\bin\Debug\ITaskNameSpace.pdb
+c:\users\peter\documents\visual studio 2015\Projects\ITaskNameSpace\ITaskNameSpace\obj\Debug\ITaskNameSpace.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\ITaskNameSpace\ITaskNameSpace\obj\Debug\ITaskNameSpace.dll
+c:\users\peter\documents\visual studio 2015\Projects\ITaskNameSpace\ITaskNameSpace\obj\Debug\ITaskNameSpace.pdb

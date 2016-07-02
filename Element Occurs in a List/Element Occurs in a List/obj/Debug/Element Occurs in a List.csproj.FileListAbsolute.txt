@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\bin\Debug\Element Occurs in a List.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\bin\Debug\Element Occurs in a List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\bin\Debug\Element Occurs in a List.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\obj\Debug\Element Occurs in a List.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\obj\Debug\Element Occurs in a List.exe
+c:\users\peter\documents\visual studio 2015\Projects\Element Occurs in a List\Element Occurs in a List\obj\Debug\Element Occurs in a List.pdb

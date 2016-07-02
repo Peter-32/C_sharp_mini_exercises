@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\bin\Debug\Compute Oscilating Convergent Series Sum.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\bin\Debug\Compute Oscilating Convergent Series Sum.exe
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\bin\Debug\Compute Oscilating Convergent Series Sum.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\obj\Debug\Compute Oscilating Convergent Series Sum.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\obj\Debug\Compute Oscilating Convergent Series Sum.exe
+c:\users\peter\documents\visual studio 2015\Projects\Compute Oscilating Convergent Series Sum\Compute Oscilating Convergent Series Sum\obj\Debug\Compute Oscilating Convergent Series Sum.pdb

@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\bin\Debug\Sum Numbers One To N.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\bin\Debug\Sum Numbers One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\bin\Debug\Sum Numbers One To N.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\obj\Debug\Sum Numbers One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\obj\Debug\Sum Numbers One To N.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N\obj\Debug\Sum Numbers One To N.csprojResolveAssemblyReference.cache

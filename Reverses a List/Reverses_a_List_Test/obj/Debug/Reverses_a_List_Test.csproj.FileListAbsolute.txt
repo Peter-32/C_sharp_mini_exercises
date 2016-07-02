@@ -1,0 +1,8 @@
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\bin\Debug\Reverses_a_List_Test.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\bin\Debug\Reverses_a_List_Test.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\bin\Debug\Reverses a List.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\bin\Debug\Reverses a List.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\obj\Debug\Reverses_a_List_Test.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\obj\Debug\Reverses_a_List_Test.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses_a_List_Test\obj\Debug\Reverses_a_List_Test.pdb

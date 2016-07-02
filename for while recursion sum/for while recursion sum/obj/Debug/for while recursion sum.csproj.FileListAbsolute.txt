@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\bin\Debug\for while recursion sum.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\bin\Debug\for while recursion sum.exe
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\bin\Debug\for while recursion sum.pdb
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\obj\Debug\for while recursion sum.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\obj\Debug\for while recursion sum.exe
+c:\users\peter\documents\visual studio 2015\Projects\for while recursion sum\for while recursion sum\obj\Debug\for while recursion sum.pdb

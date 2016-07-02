@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\linq start\linq start\bin\Debug\linq start.exe.config
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\linq start\linq start\bin\Debug\linq start.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\linq start\linq start\bin\Debug\linq start.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\linq start\linq start\obj\Debug\linq start.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\linq start\linq start\obj\Debug\linq start.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\linq start\linq start\obj\Debug\linq start.pdb

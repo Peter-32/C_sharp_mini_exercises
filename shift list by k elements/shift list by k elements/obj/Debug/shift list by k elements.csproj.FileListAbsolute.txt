@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\bin\Debug\shift list by k elements.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\bin\Debug\shift list by k elements.exe
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\bin\Debug\shift list by k elements.pdb
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\obj\Debug\shift list by k elements.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\obj\Debug\shift list by k elements.exe
+c:\users\peter\documents\visual studio 2015\Projects\shift list by k elements\shift list by k elements\obj\Debug\shift list by k elements.pdb

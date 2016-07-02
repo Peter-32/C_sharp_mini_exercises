@@ -1,0 +1,5 @@
+c:\users\peter\documents\visual studio 2015\Projects\Sum Multiples of Three From One To N\Sum Multiples of Three From One To N\bin\Debug\Sum Multiples of Three From One To N.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Sum Multiples of Three From One To N\Sum Multiples of Three From One To N\bin\Debug\Sum Multiples of Three From One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum Multiples of Three From One To N\Sum Multiples of Three From One To N\bin\Debug\Sum Multiples of Three From One To N.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Sum Multiples of Three From One To N\Sum Multiples of Three From One To N\obj\Debug\Sum Multiples of Three From One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum Multiples of Three From One To N\Sum Multiples of Three From One To N\obj\Debug\Sum Multiples of Three From One To N.pdb

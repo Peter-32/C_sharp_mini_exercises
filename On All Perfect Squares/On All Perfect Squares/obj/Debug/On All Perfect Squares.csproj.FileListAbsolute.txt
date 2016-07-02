@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\bin\Debug\On All Perfect Squares.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\obj\Debug\On All Perfect Squares.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\bin\Debug\On All Perfect Squares.exe
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\bin\Debug\On All Perfect Squares.pdb
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\obj\Debug\On All Perfect Squares.exe
+c:\users\peter\documents\visual studio 2015\Projects\On All Perfect Squares\On All Perfect Squares\obj\Debug\On All Perfect Squares.pdb

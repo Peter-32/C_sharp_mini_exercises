@@ -1,0 +1,8 @@
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\bin\Debug\Sum Numbers One To N Tests.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\bin\Debug\Sum Numbers One To N Tests.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\obj\Debug\Sum Numbers One To N Tests.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\obj\Debug\Sum Numbers One To N Tests.dll
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\obj\Debug\Sum Numbers One To N Tests.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\bin\Debug\Sum Numbers One To N.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Sum Numbers One To N\Sum Numbers One To N Tests\bin\Debug\Sum Numbers One To N.pdb

@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Reverses a List\Reverses a List\bin\Debug\Reverses a List.exe.config
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses a List\bin\Debug\Reverses a List.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses a List\bin\Debug\Reverses a List.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses a List\obj\Debug\Reverses a List.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses a List\obj\Debug\Reverses a List.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Reverses a List\Reverses a List\obj\Debug\Reverses a List.pdb

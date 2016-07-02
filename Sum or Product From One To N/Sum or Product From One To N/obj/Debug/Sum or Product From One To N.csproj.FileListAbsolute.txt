@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\bin\Debug\Sum or Product From One To N.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\bin\Debug\Sum or Product From One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\bin\Debug\Sum or Product From One To N.pdb
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\obj\Debug\Sum or Product From One To N.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\obj\Debug\Sum or Product From One To N.exe
+c:\users\peter\documents\visual studio 2015\Projects\Sum or Product From One To N\Sum or Product From One To N\obj\Debug\Sum or Product From One To N.pdb

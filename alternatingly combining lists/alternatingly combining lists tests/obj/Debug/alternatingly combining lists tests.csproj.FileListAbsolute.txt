@@ -1,0 +1,8 @@
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\bin\Debug\alternatingly combining lists tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\bin\Debug\alternatingly combining lists tests.pdb
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\bin\Debug\alternatingly combining lists.exe
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\bin\Debug\alternatingly combining lists.pdb
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\obj\Debug\alternatingly combining lists tests.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\obj\Debug\alternatingly combining lists tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\alternatingly combining lists\alternatingly combining lists tests\obj\Debug\alternatingly combining lists tests.pdb

@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\Greet User\Greet User\bin\Debug\Greet User.exe.config
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Greet User\Greet User\bin\Debug\Greet User.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Greet User\Greet User\bin\Debug\Greet User.pdb
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Greet User\Greet User\obj\Debug\Greet User.csprojResolveAssemblyReference.cache
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Greet User\Greet User\obj\Debug\Greet User.exe
+C:\Users\Peter\Documents\Visual Studio 2015\Projects\Greet User\Greet User\obj\Debug\Greet User.pdb
