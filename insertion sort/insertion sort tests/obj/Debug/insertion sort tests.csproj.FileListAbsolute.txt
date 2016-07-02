@@ -1,0 +1,8 @@
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\obj\Debug\insertion sort tests.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\bin\Debug\insertion sort tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\bin\Debug\insertion sort tests.pdb
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\bin\Debug\insertion sort.exe
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\bin\Debug\insertion sort.pdb
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\obj\Debug\insertion sort tests.dll
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort tests\obj\Debug\insertion sort tests.pdb

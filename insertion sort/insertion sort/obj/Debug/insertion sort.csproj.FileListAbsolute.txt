@@ -1,0 +1,6 @@
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\bin\Debug\insertion sort.exe.config
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\bin\Debug\insertion sort.exe
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\bin\Debug\insertion sort.pdb
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\obj\Debug\insertion sort.csprojResolveAssemblyReference.cache
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\obj\Debug\insertion sort.exe
+c:\users\peter\documents\visual studio 2015\Projects\insertion sort\insertion sort\obj\Debug\insertion sort.pdb
