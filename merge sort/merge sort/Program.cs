@@ -13,8 +13,13 @@ namespace merge_sort
             ProgramLogic programLogic = new ProgramLogic();
             List<int> list9d = new List<int> { 5, 6, 4, 7, 8, 9, 1, 2, 3 };
             programLogic.mergeSort(list9d);
-            //list9d.ForEach(Console.WriteLine);
-            
+            list9d.ForEach(Console.WriteLine);
+
+
+
+
+
+            //            Console.WriteLine("list length is {0}", listLength);
             Console.ReadKey();
         }
     }
@@ -28,21 +33,25 @@ namespace merge_sort
 
         public void mergeSort(List<int> list)
         {
-            if (list.Count() < 2) // if list is length 0 or 1 then leave the method, it is already sorted.
+            // base case
+            int listLength = list.Count();
+            if (listLength < 2) // if list is length 0 or 1 then leave the method, it is already sorted.
                 return;
+
             // split up list into one element each
             List<List<int>> listOfLists = splitsListIntoIndividualElements(list); //splits into individual elements
-            foreach (var element in listOfLists)
-            {
-                element.ForEach(Console.WriteLine);
-            }
+
             // Now merge them together
-            //List<List<int>> newList = copyListOfLists(listOfLists);
             while (listOfLists.Count() != 1)
             {
                 listOfLists = mergeListOfListsIntoLargerVersion(listOfLists);
             }
-            list = listOfLists[0];            
+
+            // Updated the original list
+            for (var i = 0; i < listLength; i++)
+            {
+                list[i] = listOfLists[0][i];
+            }
         }
 
         // splits the list into a smaller list
@@ -52,7 +61,7 @@ namespace merge_sort
             int listLength = list.Count();
             for (var i = 0; i < listLength; i++)
             {
-                newList.Add(new List<int> { list[0] });
+                newList.Add(new List<int> { list[i] });
             }
             return newList;
         }
