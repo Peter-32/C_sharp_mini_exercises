@@ -14,12 +14,6 @@ namespace merge_sort
             List<int> list9d = new List<int> { 5, 6, 4, 7, 8, 9, 1, 2, 3 };
             programLogic.mergeSort(list9d);
             list9d.ForEach(Console.WriteLine);
-
-
-
-
-
-            //            Console.WriteLine("list length is {0}", listLength);
             Console.ReadKey();
         }
     }
