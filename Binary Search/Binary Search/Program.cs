@@ -12,7 +12,9 @@ namespace Binary_Search
         {
             ProgramLogic programLogic = new ProgramLogic();
             intSet testIntSet = new nonEmpty(3, new empty(), new empty());
+            intSet testIntSet2 = new nonEmpty(19, new empty(), new empty()).incl(20).incl(21);
             intSet newTestIntSet = testIntSet.incl(5).incl(7).incl(21).incl(1);
+            intSet newUnionTestIntSet = newTestIntSet.union(testIntSet2);
             Console.WriteLine(newTestIntSet);
             Console.WriteLine("newTestIntSet.contains(7) = {0}",newTestIntSet.contains(7));
             Console.WriteLine("newTestIntSet.contains(12) = {0}", newTestIntSet.contains(12));
@@ -20,6 +22,8 @@ namespace Binary_Search
             Console.WriteLine("newTestIntSet.contains(5) = {0}", newTestIntSet.contains(5));
             Console.WriteLine("newTestIntSet.incl(-3) returns {0}", newTestIntSet.incl(-3));
             Console.WriteLine("Binary search works well with objects and characters as well.  For objects you need to identify which property the binary search will sort by.");
+            Console.WriteLine("testing union of 19,20,21 returns:");
+            Console.WriteLine(newUnionTestIntSet);
             Console.ReadKey();
         }
     }
@@ -36,6 +40,7 @@ namespace Binary_Search
     {
         public abstract intSet incl(int number);
         public abstract bool contains(int number);
+        public abstract intSet union(intSet that);
     }
 
     public class nonEmpty : intSet
@@ -65,6 +70,11 @@ namespace Binary_Search
             return true;
         }
 
+        public override intSet union(intSet that)
+        {
+            return left.union(right).union(that).incl(elem);
+        }
+
         public override string ToString()
         {
             return "{" + left + " " + elem + " " + right + "}";
@@ -91,6 +101,11 @@ namespace Binary_Search
         public override bool contains(int number)
         {
             return false;
+        }
+
+        public override intSet union(intSet that)
+        {
+            return that;
         }
 
         public override string ToString()
