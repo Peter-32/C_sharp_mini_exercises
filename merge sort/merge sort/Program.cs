@@ -11,7 +11,7 @@ namespace merge_sort
         static void Main(string[] args)
         {
             ProgramLogic programLogic = new ProgramLogic();
-            List<int> list9d = new List<int> { 5, 6, 4, 7, 8, 9, 1, 2, 3 };
+            List<int> list9d = new List<int> { 71, 53, 83, 57, 50, 30, 68, 72, 67, 66, 54, 100, 86, 82, 60, 45, 52, 51, 34, 42, 39, 95, 22, 3, 37, 99, 90, 47, 17, 84, 85, 91, 59, 76, 65, 4, 87, 97, 98, 93, 28, 9, 38, 21, 14, 49, 56, 44, 16, 89, 46, 48, 27, 74, 43, 80, 40, 69, 5, 75, 77, 73, 79, 32, 61, 70, 25, 20, 81, 96, 12, 31, 18, 11, 78, 33, 88, 35, 26, 41, 8, 7, 58, 6, 64, 55, 23, 1, 13, 19, 15, 94, 10, 62, 92, 24, 2, 29, 36, 63 };
             programLogic.mergeSort(list9d);
             list9d.ForEach(Console.WriteLine);
             Console.ReadKey();
