@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stooge sort", "stooge sort\stooge sort.csproj", "{49A8C71B-6388-45B6-82CD-1A0DEEB25258}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stooge sort tests", "stooge sort tests\stooge sort tests.csproj", "{8A4A5C37-3A42-4CB1-89DE-B8FC361B416E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49A8C71B-6388-45B6-82CD-1A0DEEB25258}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A8C71B-6388-45B6-82CD-1A0DEEB25258}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A8C71B-6388-45B6-82CD-1A0DEEB25258}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A8C71B-6388-45B6-82CD-1A0DEEB25258}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A4A5C37-3A42-4CB1-89DE-B8FC361B416E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4A5C37-3A42-4CB1-89DE-B8FC361B416E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4A5C37-3A42-4CB1-89DE-B8FC361B416E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4A5C37-3A42-4CB1-89DE-B8FC361B416E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
