@@ -4,6 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+//// TO DO:
+// verify everything is looking okay
+// refactor
+// Create insertion, deletion, modification abilities in the controller
+// Think of methods to add (Primarily to the controller
+// Add method: hasRelationship(node1, node2)
+// Update ToString methods
+// Create example nodes & edges
+// Create a method that takes user input and it passes commands to the controller
+
+
+
+
+
+
+
+
+
+
+
+
+
 namespace Data_Structure_for_Graphs
 {
     public class Program
@@ -12,15 +35,15 @@ namespace Data_Structure_for_Graphs
         // Edges are required to attach to nodes
         static void Main(string[] args)
         {
+            Dictionary<Node, List<Edge>> dictionary = new Dictionary<Node, List<Edge>>();
+            Node node1Test = new Node("test", 0);
+            Node node2Test = new Node("test2", 0);
+            dictionary.Add(node1Test, new List<Edge>());
+            Edge edge1Test = new Edge("testing dictionary", 1, node1Test, node2Test);
+            dictionary[node1Test].Add(edge1Test);
+            dictionary[node1Test].Add(edge1Test);
+            dictionary[node1Test].ForEach(Console.WriteLine);
 
-
-            /* GraphingController.nodeList.Add(GraphingFactory.createNode("Who is the culprit?", 0));
-            GraphingController.nodeList.Add(GraphingFactory.createNode("James", 1));
-            GraphingController.nodeList.Add(GraphingFactory.createNode("Charlie", 1));
-            GraphingController.nodeList.Add(GraphingFactory.createNode("Ryan", 1));
-            GraphingController.edgeList.Add(GraphingFactory.createEdge("The culprit might be punctual", .25, nodeList[0], nodeList[1]));
-            GraphingController.edgeList.Add(GraphingFactory.createEdge("The culprit might be punctual", .50, nodeList[0], nodeList[2]));
-            GraphingController.edgeList.Add(GraphingFactory.createEdge("The culprit might be punctual", .25, nodeList[0], nodeList[3])); */
             Console.ReadKey();
         }
     }
@@ -31,6 +54,9 @@ namespace Data_Structure_for_Graphs
         public static Node createNode(string value, int location)
         {
             Node newNode = new Node(value, location);
+            // The graphing controller needs to update the node list
+            GraphingController.nodeList.Add(newNode);
+            // The graphing controller needs to update its dictionary
             GraphingController.dictionary.Add(newNode, new List<Edge>());
             return newNode;
         }
@@ -38,7 +64,11 @@ namespace Data_Structure_for_Graphs
         public static Edge createEdge(string description, double value, Node node1, Node node2)
         {
             Edge newEdge = new Edge(description, value, node1, node2);
+            // The graphing controller needs to update the edge list
+            GraphingController.edgeList.Add(newEdge);
+            // The graphing controller needs to update its dictionary twice
             GraphingController.dictionary[node1].Add(newEdge);
+            GraphingController.dictionary[node2].Add(newEdge);
             return newEdge;
         }
     }
@@ -47,7 +77,7 @@ namespace Data_Structure_for_Graphs
     {
         // PROPERTIES
 
-        // For a node (key), what edges are attached to it (value)?
+        // Dictionary: For a node (key), what edges are attached to it (value)?
         public static Dictionary<Node, List<Edge>> dictionary = new Dictionary<Node, List<Edge>>();
 
         // Keeps the memory location of each node in a list
@@ -65,17 +95,6 @@ namespace Data_Structure_for_Graphs
         } = new List<Edge>();
 
         // METHODS
-
-        //////////////////////////// Add methods; insert, modify, delete.  For delete node, remove the node from the node list.  Remove the edges attached to it.
-        // when removing edges, remove the reference to those edges in the node's edgeList
-
-        /* public void delete()
-        {
-            node1.edgeList.Remove(this);
-            node2.edgeList.Remove(this);
-            GraphingController.
-        } */
-
 
     }
 
@@ -106,6 +125,10 @@ namespace Data_Structure_for_Graphs
         }
 
         // METHODS
+        public override string ToString()
+        {
+            return value + " " + location;
+        }
     }
 
     public class Edge
@@ -117,8 +140,6 @@ namespace Data_Structure_for_Graphs
             this.value = value;
             this.node1 = node1;
             this.node2 = node2;
-            node1.edgeList.Add(this);
-            node2.edgeList.Add(this);
         }
 
         // PROPERTIES
@@ -144,6 +165,10 @@ namespace Data_Structure_for_Graphs
         }
 
         // METHODS
+        public override string ToString()
+        {
+            return description + " " + value;
+        }
 
     }
 }
