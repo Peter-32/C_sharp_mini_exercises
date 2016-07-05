@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CE228E8-AA8F-4EB2-8555-96F94E00415A}</ProjectGuid>
+    <ProjectGuid>{16E31A4B-7CD5-4A0A-BDE7-4B1144B0E7A6}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Add_or_Sub_9_digits_to_Equal_100</RootNamespace>
-    <AssemblyName>Add or Sub 9 digits to Equal 100</AssemblyName>
+    <RootNamespace>Solar_Year_Foreign_Planet_Leap_Year_Calc</RootNamespace>
+    <AssemblyName>Solar Year Foreign Planet Leap Year Calc</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -33,9 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Print In Frame">
-      <HintPath>..\..\Print In Frame\Print In Frame\bin\Debug\Print In Frame.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />

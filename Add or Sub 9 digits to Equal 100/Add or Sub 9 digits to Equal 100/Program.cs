@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Print_In_Frame;
 
 namespace Add_or_Sub_9_digits_to_Equal_100
 {
@@ -16,19 +17,17 @@ namespace Add_or_Sub_9_digits_to_Equal_100
         }
     }
 
+    // Problem: Place plus or minus signs between 123456789 so that the computation is equal to 100.
     public class ProgramLogic
-    {
-        public void execute()
-        {
-
-        }
-
-     
+    {     
         public void printCombinationsThatEqual100ByPlacingAddOrSubtractSignInBetween123456789()
         {
+            PrintInFrame printInFrame = new PrintInFrame();
             List<List<int>> choices = createAllValidExpressionsForTesting();
             List<string> validExpressions = filterForValidExpressionsAddingTo100(choices); // These equal 100
-            validExpressions.ForEach(Console.WriteLine);
+            Console.WriteLine("These expressions equal 100");
+            Console.WriteLine();
+            printInFrame.printListInFrame(validExpressions);
         }
 
         // The expression is expression = "1?2?3?4?5?6?7?8?9"
@@ -45,23 +44,47 @@ namespace Add_or_Sub_9_digits_to_Equal_100
                                             (i / (int)Math.Pow(3,5)) % 3, (i / (int)Math.Pow(3,4)) % 3,
                                             (i / (int)Math.Pow(3,3)) % 3, (i / (int)Math.Pow(3,2)) % 3,
                                             (i / 3) % 3, i % 3});
-            }
-
-
-            /* var j = 0;
-            while(j < 6561)
-            {
-                for (var k = 0; k < 8; k++)
-                {
-                    Console.Write(" " + choices[j][k]);
-                }
-                Console.WriteLine();
-                j++;
-            } */
-
-
-
+            }            
             return choices;
+        }
+
+        // filters for valid expressions only based on whether they equal 100
+        public List<string> filterForValidExpressionsAddingTo100(List<List<int>> choices)
+        {
+            List<string> validExpressions = new List<string>();
+            int listLength = choices.Count;
+            string expressionString;
+
+            for (var i = 0; i < listLength; i++)
+            {
+                expressionString = buildStringExpressionFromChoices(choices[i]);
+                if (doesExpressionEqual100(expressionString))
+                {
+                    validExpressions.Add(expressionString);
+                }
+            }
+            return validExpressions;
+        }
+
+        // given choices build a string expression for it
+        public string buildStringExpressionFromChoices(List<int> choice)
+        {
+            if (choice.Count() != 8)
+                throw new Exception("choices array isn't length 8");
+
+            List<string> choicesString = new List<string>();
+            foreach (var element in choice)
+            {
+                if (element == 0)
+                    choicesString.Add("");
+                else if (element == 1)
+                    choicesString.Add("+");
+                else
+                    choicesString.Add("-");
+            }
+            return String.Concat("1", choicesString[0], "2", choicesString[1], "3", choicesString[2],
+                "4", choicesString[3], "5" + choicesString[4], "6" + choicesString[5], "7",
+                choicesString[6], "8", choicesString[7], "9");
         }
 
         // pass in an choices which is a length 8 array of choices 0, 1, 2
@@ -104,45 +127,6 @@ namespace Add_or_Sub_9_digits_to_Equal_100
             return acc == 100;
         }       
 
-        // filters for valid expressions only based on whether they equal 100
-        public List<string> filterForValidExpressionsAddingTo100(List<List<int>> choices)
-        {
-            List<string> validExpressions = new List<string>();
-            int listLength = choices.Count;
-            string expressionString;
-
-            for (var i = 0; i < listLength; i++)
-            {
-                expressionString = buildStringExpressionFromChoices(choices[i]);
-                if (doesExpressionEqual100(expressionString))
-                {
-                    validExpressions.Add(expressionString);
-                }
-            }
-            return validExpressions;
-        }
-
-        // given choices build a string expression for it
-        public string buildStringExpressionFromChoices(List<int> choice)
-        {
-            if (choice.Count() != 8)
-                throw new Exception("choices array isn't length 8");
-
-            List<string> choicesString = new List<string>();
-            foreach (var element in choice)
-            {
-                if (element == 0)
-                    choicesString.Add("");
-                else if (element == 1)
-                    choicesString.Add("+");
-                else
-                    choicesString.Add("-");
-            }
-            return String.Concat("1", choicesString[0], "2", choicesString[1], "3", choicesString[2],
-                "4", choicesString[3], "5" + choicesString[4], "6" + choicesString[5], "7",
-                choicesString[6], "8", choicesString[7], "9");
-        }
-
         //// EXTRA UNUSED FUNCTION ////
         public int combineIntegers(params int[] numbers)
         {
@@ -175,6 +159,5 @@ namespace Add_or_Sub_9_digits_to_Equal_100
             acc++; // add one for nine
             return (acc == 2 || acc == 4);
         }
-
     }
 }
