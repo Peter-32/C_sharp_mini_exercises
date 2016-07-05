@@ -72,8 +72,8 @@ namespace Solar_Year_Foreign_Planet_Leap_Year_Calc
             fractionalSolarYear = FractionMathUtils.keepOnlyFractionPart(fractionalSolarYear);
             int firstRuleYearsPerLeapYear = ForeignPlanetCalculations.calendarYearsToBeCloseToIntSolarYear(fractionalSolarYear,1);
             // We've found the number of years each leap year
-            Console.WriteLine("Have a leap Year Every {0} years", firstRuleYearsPerLeapYear);
-            
+            Console.WriteLine("Have " + Math.Round(firstRuleYearsPerLeapYear * fractionalSolarYear) + " leap years every " + firstRuleYearsPerLeapYear + " years");
+
             // If it is close enough we are done
             if (FractionMathUtils.withinIntervalOfANaturalNumber(firstRuleYearsPerLeapYear * fractionalSolarYear, secondInterval))
             {
