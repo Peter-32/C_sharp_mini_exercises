@@ -6,27 +6,12 @@ using System.Threading.Tasks;
 
 
 //// TO DO:
-// verify everything is looking okay
-// refactor
-// Create insertion, deletion, modification abilities in the controller
-// Think of methods to add (Primarily to the controller
-// Add method: hasRelationship(node1, node2)
-// Update ToString methods
 // Create example nodes & edges
 // Create a method that takes user input and it passes commands to the controller
-
-
-
-
-
-
-
-
-
-
-
-
-
+// test the user input
+// add simple rendering view
+// set up access rights, maybe local or something
+// make into a ddl file
 namespace Data_Structure_for_Graphs
 {
     public class Program
@@ -35,45 +20,147 @@ namespace Data_Structure_for_Graphs
         // Edges are required to attach to nodes
         static void Main(string[] args)
         {
-            Dictionary<Node, List<Edge>> dictionary = new Dictionary<Node, List<Edge>>();
-            Node node1Test = new Node("test", 0);
-            Node node2Test = new Node("test2", 0);
-            dictionary.Add(node1Test, new List<Edge>());
-            Edge edge1Test = new Edge("testing dictionary", 1, node1Test, node2Test);
-            dictionary[node1Test].Add(edge1Test);
-            dictionary[node1Test].Add(edge1Test);
-            dictionary[node1Test].ForEach(Console.WriteLine);
-
+            Controller.createNode("Carl", 0, 0);
+            Controller.createNode("James", 1, 0);
+            Controller.createNode("Tom", 1, 1);
+            Controller.createNode("Janet", 2, 1);
+            //Controller.
             Console.ReadKey();
         }
     }
 
-    // You should be able to modify, insert, delete nodes and edges
-    public static class GraphingFactory
-    { 
-        public static Node createNode(string value, int location)
+    public static class Switch
+    {
+        public static bool on
         {
-            Node newNode = new Node(value, location);
-            // The graphing controller needs to update the node list
-            GraphingController.nodeList.Add(newNode);
-            // The graphing controller needs to update its dictionary
-            GraphingController.dictionary.Add(newNode, new List<Edge>());
-            return newNode;
+            get;
+            set;
+        } = true;
+    }
+
+    public static class InputPile
+    {
+        public static void issueRequest(string request)
+        {
+            requests.Add(request);
         }
 
-        public static Edge createEdge(string description, double value, Node node1, Node node2)
+        public static List<string> requests
         {
-            Edge newEdge = new Edge(description, value, node1, node2);
-            // The graphing controller needs to update the edge list
-            GraphingController.edgeList.Add(newEdge);
-            // The graphing controller needs to update its dictionary twice
-            GraphingController.dictionary[node1].Add(newEdge);
-            GraphingController.dictionary[node2].Add(newEdge);
-            return newEdge;
+            get;
+            set;
+        } = new List<string>();
+    }
+
+    public static class Controller
+    {
+        //// METHODS
+
+        // CRUD Node
+        public static void createNode(string key, int xLocation, int yLocation)
+        {
+            Node.Create(key, xLocation, yLocation);
+        }
+
+        public static Node selectNode(string searchKey)
+        {
+            foreach (var element in Model.nodeList)
+            {
+                if (element.key == searchKey)
+                    return element;
+            }
+            Console.WriteLine("Tried to select a node but no such node exists");
+            return null;
+        }
+
+        public static void modifyNode(Node node, string key, int xLocation, int yLocation)
+        {
+            node.key = key;
+            node.xLocation = xLocation;
+            node.yLocation = yLocation;
+        }
+
+        public static void deleteNode(Node node)
+        {
+            Model.dictionary.Remove(node);
+            Model.nodeList.Remove(node);
+        }
+
+        // CRUD Edge
+        public static void createEdge(string key, string description, Node node1, Node node2)
+        {
+            Edge.Create(key, description, node1, node2);
+        }
+
+        public static Edge selectEdge(string searchKey)
+        {
+            foreach (var element in Model.edgeList)
+            {
+                if (element.key == searchKey)
+                    return element;
+            }
+            Console.WriteLine("Tried to select an edge but no such edge exists");
+            return null;
+        }
+
+        public static void modifyEdge(Edge edge, string key, string description, Node node1, Node node2)
+        {
+            edge.description = description;
+            edge.key = key;
+            edge.node1 = node1;
+            edge.node2 = node2;
+        }
+
+        public static void deleteEdge(Edge edge)
+        {
+            Model.dictionary[edge.node1].Remove(edge);
+            Model.dictionary[edge.node2].Remove(edge);
+            Model.edgeList.Remove(edge);
+        }
+
+        // Validation methods
+        public static bool isUniqueNodeKey(string checkKey)
+        {
+            int nodeListLength = Model.nodeList.Count();
+            for (var i = 0; i < nodeListLength; i++)
+            {
+                if (checkKey == Model.nodeList[i].key)
+                    return false;
+            }
+            return true;
+        }
+        public static bool isUniqueEdgeKey(string checkKey)
+        {
+            int edgeListLength = Model.edgeList.Count();
+            for (var i = 0; i < edgeListLength; i++)
+            {
+                if (checkKey == Model.edgeList[i].key)
+                    return false;
+            }
+            return true;
+        }
+
+        // Graph associations, what is attached to each other
+        public static List<Edge> selectEdges(Node queryNode)
+        {
+            return Model.dictionary[queryNode];
+        }
+        
+        public static List<Node> selectNearestNodes(Node queryNode)
+        {
+            List<Node> nodes = new List<Node>();
+            foreach (var edge in Model.dictionary[queryNode])
+            {
+                if (edge.node1 != queryNode) // then it is a new node
+                    nodes.Add(edge.node1);
+                if (edge.node2 != queryNode) // then it is a new node
+                    nodes.Add(edge.node1);
+            }
+            return nodes.Distinct().ToList(); // remove any duplication, then return the node list
         }
     }
 
-    public static class GraphingController
+    public static class Model
     {
         // PROPERTIES
 
@@ -93,32 +180,49 @@ namespace Data_Structure_for_Graphs
             get;
             set;
         } = new List<Edge>();
-
-        // METHODS
-
     }
 
     public class Node
     {
         // CONSTRUCTORS
-        public Node(string value, int location)
+        private Node(string key, int xLocation, int yLocation)
         {
-            this.value = value;
-            this.location = location;
+            this.key = key;
+            this.xLocation = xLocation;
+            this.yLocation = yLocation;
         }
 
+        public static void Create(string key, int xLocation, int yLocation)
+        {
+            if (Controller.isUniqueNodeKey(key))
+            {
+                Node newNode = new Node(key, xLocation, yLocation);
+                // The graphing controller needs to update the node list
+                Model.nodeList.Add(newNode);
+                // The graphing controller needs to update its dictionary
+                Model.dictionary.Add(newNode, new List<Edge>());
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Failed to create node.  Not a unique key.");
+                return;
+            }
+        }
         // PROPERTIES
-        public string value
+        public string key
         {
             get;
             set;
         }
-        /* public List<Edge> edgeList
+        
+        public int xLocation
         {
             get;
             set;
-        } */
-        public int location
+        }
+
+        public int yLocation
         {
             get;
             set;
@@ -127,19 +231,39 @@ namespace Data_Structure_for_Graphs
         // METHODS
         public override string ToString()
         {
-            return value + " " + location;
+            return String.Concat("Node ", key, " - At location (", xLocation, ",", yLocation, ")");
         }
     }
 
     public class Edge
     {
         // CONSTRUCTORS
-        public Edge(string description, double value, Node node1, Node node2)
+        private Edge(string key, string description, Node node1, Node node2)
         {
             this.description = description;
-            this.value = value;
+            this.key = key;
             this.node1 = node1;
             this.node2 = node2;
+        }
+
+        public static void Create(string key, string description, Node node1, Node node2)
+        {
+            if (Controller.isUniqueEdgeKey(key))
+            {
+                Edge newEdge = new Edge(key, description, node1, node2);
+                // The graphing controller needs to update the edge list
+                Model.edgeList.Add(newEdge);
+                // The graphing controller needs to update its dictionary twice
+                Model.dictionary[node1].Add(newEdge);
+                Model.dictionary[node2].Add(newEdge);
+
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Failed to create edge.  Not a unique key.");
+                return;
+            }
         }
 
         // PROPERTIES
@@ -148,7 +272,7 @@ namespace Data_Structure_for_Graphs
             get;
             set;
         }
-        public double value
+        public string key
         {
             get;
             set;
@@ -167,7 +291,7 @@ namespace Data_Structure_for_Graphs
         // METHODS
         public override string ToString()
         {
-            return description + " " + value;
+            return String.Concat("Edge ", key, " - ", description);
         }
 
     }
