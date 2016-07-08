@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace Data_Structure_for_Graphs_DDL
 {
@@ -13,83 +14,130 @@ namespace Data_Structure_for_Graphs_DDL
     // set up access rights, maybe local or something
     // make into a ddl file       
 
-    public static class InputPile
+    class Program
     {
-        public static TransportForInputToController transport = new TransportForInputToController();
-        public static Dictionary<int, string> requests
+        static void Main(string[] args)
         {
-            get;
-            set;
-        } = new Dictionary<int, string>();
-        public static int nextIdxForStorage
-        {
-            get;
-            set;
-        } = 0;
-        public static int nextIdxForExecution
-        {
-            get;
-            set;
-        } = 0;
-
-        // A foreign library supplies a request
-        public static void issueRequest(string request)
-        {
-            
-            requests.Add(nextIdxForStorage, request);
-            nextIdxForStorage++;
-        }
-       
-        // Internally removes an entry from the dictionary
-        // Always removes the next request for execution
-        public static void removeRequest()
-        {
-            requests.Remove(nextIdxForExecution);
-            nextIdxForExecution++;
-        }
-
-        public static void enableTransport()
-        {
-            transport.beginTransport();
-        }
-
-        public static void disableTransport()
-        {
-            transport.endTransport();
+            PromptInput.mainLoop();
+            Console.ReadKey();
         }
     }
 
-    // This class will transport input from the input pile to the controller
-    // this transport can be turned on and off at the input pile
-    public class TransportForInputToController
+    public static class PromptInput
     {
-        private System.Threading.Timer timer;
-        private string request;
+        private static string line = "";
+        private static bool exit = false;
 
-        public void beginTransport()
+        // the main loop
+        public static void mainLoop()
         {
-            timer = new System.Threading.Timer(makeTrip, null, 1000, 1000);
-        }
-
-        public void endTransport()
-        {
-            timer.Dispose();
-        }
-
-        private void makeTrip(object state)
-        {
-            lock(this)
+            do
             {
-                // The dictionary name is called "requests".  "nextIdxForExecution" stores the integer 
-                // lookup value for the next dictionary entry for execution.
-                request = InputPile.requests[InputPile.nextIdxForExecution];
-                // this will remove the entry from the dictionary
-                InputPile.removeRequest();
-                // this will hand the request over to the controller for immediate execution
-                Controller.executeRequests(request);                
-            }
+                // get input from the user
+                //InputPile.enableTransport();
+                //TransportForInputToController transport = new TransportForInputToController();
+                //transport.beginTransport();
+                Console.WriteLine("Please issue a command for the graph input pile.");
+                line = Console.ReadLine();
+                sendToGraphController(line);
+                updateExit(line);
+            } while (!exit);
+        }
+
+        // issues the request to the graphing ddl
+        public static void sendToGraphController(string input)
+        {
+            Data_Structure_for_Graphs_DDL.Controller.executeRequests(input);
+        }
+
+        public static void updateExit(string line)
+        {
+            if (line == "exit" || line == "quit")
+                exit = true;
+            else
+                exit = false;
         }
     }
+
+    /*
+public static class InputPile
+{
+    public static TransportForInputToController transport = new TransportForInputToController();
+    public static List<string> requests
+    {
+        get;
+        set;
+    } = new List<string>();
+    public static int nextIdxForExecution
+    {
+        get;
+        set;
+    } = 0;
+    public static int numUnreadRequests = 0;
+
+    // A foreign library supplies a request
+    public static void issueRequest(string request)
+    {            
+        requests.Add(request);
+        numUnreadRequests++;
+    }
+   // gives a request
+    public static string getNextRequest()
+    {
+        string request = requests[nextIdxForExecution];
+        nextIdxForExecution++;
+        numUnreadRequests--;
+        return request;
+    }
+    // Internally removes an entry from the list
+    // Always removes the next request for execution
+    public static void disposeOfRequests()
+    {
+        requests.Clear();
+        nextIdxForExecution = 0;
+        numUnreadRequests = 0;
+    }
+
+    public static void enableTransport()
+    {
+        transport.beginTransport();
+    }
+
+    public static void disableTransport()
+    {
+        transport.endTransport();
+    }
+}
+
+// This class will transport input from the input pile to the controller
+// this transport can be turned on and off at the input pile
+public class TransportForInputToController
+{
+    private System.Threading.Timer timer;
+    private string request;
+
+    public void beginTransport()
+    {
+        //_timer = new Timer(makeTrip, null, 1000, Timeout.Infinite ); ////////// Ticks once in 1 second
+    }
+
+    public void endTransport()
+    {
+        timer.Dispose();
+    }
+
+    private void makeTrip(Object state)
+    {
+        if (InputPile.numUnreadRequests == 0)  // Check if a trip is needed
+            return;
+        // The list name is called "requests". 
+        request = InputPile.getNextRequest();
+        // this will hand the request over to the controller for immediate execution
+        Controller.executeRequests(request);
+        _timer.Change(1000, Timeout.Infinite); // no concurrency; starts again only once everything before is completed
+    }
+}
+*/
 
     public static class Controller
     {        
@@ -198,7 +246,7 @@ namespace Data_Structure_for_Graphs_DDL
         // executes the request that comes from the transport
         public static void executeRequests(string input)
         {
-
+            Console.WriteLine(String.Concat("The controller got your request: ", input));
         }
 
     }
