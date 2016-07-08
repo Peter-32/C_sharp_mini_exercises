@@ -53,7 +53,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Side Scroller Game";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWind_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.GameWind_Load);
             this.ResumeLayout(false);
 
         }

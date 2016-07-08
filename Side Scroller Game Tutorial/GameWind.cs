@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Side_Scroller_Game_Tutorial
 {
@@ -20,17 +21,10 @@ namespace Side_Scroller_Game_Tutorial
             InitializeComponent();
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
         // Canvas paint function - launches paint functionality
         private void canvas_Paint(object sender, PaintEventArgs e)
         {
-            // load the graphics object, and use the game to do that
+            game.loadLevel();
             Graphics g = canvas.CreateGraphics();
             game.startGraphics(g);
         }
@@ -40,5 +34,16 @@ namespace Side_Scroller_Game_Tutorial
         {
             game.stopGame();
         }
+
+        private void GameWind_Load(object sender, EventArgs e)
+        {
+            AllocConsole();
+        }
+
+        // Allows the command line to be seen during normal execution
+        [DllImport("kernel32.dll", SetLastError = true)]
+        [return: MarshalAsAttribute(UnmanagedType.Bool)]
+        static extern bool AllocConsole();
+
     }
 }

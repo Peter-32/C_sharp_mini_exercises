@@ -17,6 +17,11 @@ namespace Side_Scroller_Game_Tutorial
         private Graphics drawHandle;
         private Thread renderThread;
 
+        // loading as asset takes a while so we save them
+        private Bitmap tex_steve;
+        private Bitmap tex_dirt;
+
+
         /*------------Functions---------------------*/
 
         public GEngine(Graphics g)
@@ -24,28 +29,80 @@ namespace Side_Scroller_Game_Tutorial
             drawHandle = g;
         }
 
-        // Starts a render thread
+        // Takes care of initializing all important things.
         public void init()
         {
+            // Load assets
+            loadAssets();
+
+            // Starts the render thread
             renderThread = new Thread(new ThreadStart(render));
             renderThread.Start();
         }
 
-        // Stops a render thread
+        // Loads resources
+        private void loadAssets()
+        {
+            tex_steve = Side_Scroller_Game_Tutorial.Properties.Resources.steve;
+            tex_dirt = Side_Scroller_Game_Tutorial.Properties.Resources.dirt;
+        }
+
+        // Stops a render thread in it's tracks
         public void stop()
         {
             renderThread.Abort();
         }
 
-        // this will do ALL the drawing 
+        // Runs indefinitely, drawing frame by frame
         private void render()
         {
-            // since this is a new thread, it will use an infinite loop that runs forever
+            // Benchmarking info
+            int framesRendered = 0;
+            long startTime = Environment.TickCount;
+
+            // Objects used for constructing the individual frames of the game
+            Bitmap frame = new Bitmap(Game.CANVAS_WIDTH, Game.CANVAS_HEIGHT);
+            Graphics frameGraphics = Graphics.FromImage(frame);
+
+            TextureID[,] textures = Level.Blocks;
+
             while (true)
-            {
-                // We use solid brush because we don't have assets yet
-                // 0,0 & 1200,700 are x, y positions. We want to fill the entire panel
-                drawHandle.FillRectangle(new SolidBrush(Color.Aqua), 0, 0, 1200, 700);
+            {                                
+                // Background Color                
+                frameGraphics.FillRectangle(new SolidBrush(Color.Aqua), 0, 0, Game.CANVAS_WIDTH, Game.CANVAS_HEIGHT);
+
+                // 
+                for (int x = 0; x < Game.LEVEL_WIDTH; x++)
+                {
+                    for (int y = 0; y < Game.LEVEL_HEIGHT; y++)
+                    {
+                        switch(textures[x,y])
+                        {
+                            case TextureID.air:
+                                break;
+                            case TextureID.dirt:
+                                frameGraphics.DrawImage(tex_dirt, x * Game.TILE_SIDE_LENGTH, y * Game.TILE_SIDE_LENGTH);
+                                break;
+                        }
+                    }
+                }
+
+                // Draw steve
+                //frameGraphics.DrawImage(tex_steve, 100, 100);
+
+                // Draw the frame on the canvas
+                drawHandle.DrawImage(frame, 0, 0);
+
+                //Benchmarking
+                framesRendered++;
+                if (Environment.TickCount >= startTime + 1000) // at least one second has occurred
+                {
+                    Console.WriteLine("GEngine: " + framesRendered + " fps");
+                    framesRendered = 0;
+                    startTime = Environment.TickCount;
+                }
+                
+
             }
         }
 
