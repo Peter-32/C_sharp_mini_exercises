@@ -4,56 +4,95 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-//// TO DO:
-// Create example nodes & edges
-// Create a method that takes user input and it passes commands to the controller
-// test the user input
-// add simple rendering view
-// set up access rights, maybe local or something
-// make into a ddl file
-namespace Data_Structure_for_Graphs
+namespace Data_Structure_for_Graphs_DDL
 {
-    public class Program
-    {
-        // Nodes can be independent from edges
-        // Edges are required to attach to nodes
-        static void Main(string[] args)
-        {
-            Controller.createNode("Carl", 0, 0);
-            Controller.createNode("James", 1, 0);
-            Controller.createNode("Tom", 1, 1);
-            Controller.createNode("Janet", 2, 1);
-            //Controller.
-            Console.ReadKey();
-        }
-    }
-
-    public static class Switch
-    {
-        public static bool on
-        {
-            get;
-            set;
-        } = true;
-    }
+    //// TO DO:
+    // Create a method that takes user input and it passes commands to the controller
+    // test the user input
+    // add simple rendering view
+    // set up access rights, maybe local or something
+    // make into a ddl file       
 
     public static class InputPile
     {
-        public static void issueRequest(string request)
-        {
-            requests.Add(request);
-        }
-
-        public static List<string> requests
+        public static TransportForInputToController transport = new TransportForInputToController();
+        public static Dictionary<int, string> requests
         {
             get;
             set;
-        } = new List<string>();
+        } = new Dictionary<int, string>();
+        public static int nextIdxForStorage
+        {
+            get;
+            set;
+        } = 0;
+        public static int nextIdxForExecution
+        {
+            get;
+            set;
+        } = 0;
+
+        // A foreign library supplies a request
+        public static void issueRequest(string request)
+        {
+            
+            requests.Add(nextIdxForStorage, request);
+            nextIdxForStorage++;
+        }
+       
+        // Internally removes an entry from the dictionary
+        // Always removes the next request for execution
+        public static void removeRequest()
+        {
+            requests.Remove(nextIdxForExecution);
+            nextIdxForExecution++;
+        }
+
+        public static void enableTransport()
+        {
+            transport.beginTransport();
+        }
+
+        public static void disableTransport()
+        {
+            transport.endTransport();
+        }
+    }
+
+    // This class will transport input from the input pile to the controller
+    // this transport can be turned on and off at the input pile
+    public class TransportForInputToController
+    {
+        private System.Threading.Timer timer;
+        private string request;
+
+        public void beginTransport()
+        {
+            timer = new System.Threading.Timer(makeTrip, null, 1000, 1000);
+        }
+
+        public void endTransport()
+        {
+            timer.Dispose();
+        }
+
+        private void makeTrip(object state)
+        {
+            lock(this)
+            {
+                // The dictionary name is called "requests".  "nextIdxForExecution" stores the integer 
+                // lookup value for the next dictionary entry for execution.
+                request = InputPile.requests[InputPile.nextIdxForExecution];
+                // this will remove the entry from the dictionary
+                InputPile.removeRequest();
+                // this will hand the request over to the controller for immediate execution
+                Controller.executeRequests(request);                
+            }
+        }
     }
 
     public static class Controller
-    {
+    {        
         //// METHODS
 
         // CRUD Node
@@ -75,9 +114,8 @@ namespace Data_Structure_for_Graphs
 
         public static void modifyNode(Node node, string key, int xLocation, int yLocation)
         {
-            node.key = key;
-            node.xLocation = xLocation;
-            node.yLocation = yLocation;
+            deleteNode(node);
+            createNode(key, xLocation, yLocation);
         }
 
         public static void deleteNode(Node node)
@@ -105,10 +143,8 @@ namespace Data_Structure_for_Graphs
 
         public static void modifyEdge(Edge edge, string key, string description, Node node1, Node node2)
         {
-            edge.description = description;
-            edge.key = key;
-            edge.node1 = node1;
-            edge.node2 = node2;
+            deleteEdge(edge);
+            createEdge(key, description, node1, node2);
         }
 
         public static void deleteEdge(Edge edge)
@@ -141,23 +177,30 @@ namespace Data_Structure_for_Graphs
         }
 
         // Graph associations, what is attached to each other
-        public static List<Edge> selectEdges(Node queryNode)
+        public static List<Edge> selectLinkedEdges(Node queryNode)
         {
             return Model.dictionary[queryNode];
         }
-        
-        public static List<Node> selectNearestNodes(Node queryNode)
+
+        public static List<Node> selectNearestLinkedNodes(Node queryNode)
         {
             List<Node> nodes = new List<Node>();
-            foreach (var edge in Model.dictionary[queryNode])
+            foreach (var edge in selectLinkedEdges(queryNode))
             {
                 if (edge.node1 != queryNode) // then it is a new node
                     nodes.Add(edge.node1);
                 if (edge.node2 != queryNode) // then it is a new node
-                    nodes.Add(edge.node1);
+                    nodes.Add(edge.node2);
             }
             return nodes.Distinct().ToList(); // remove any duplication, then return the node list
         }
+
+        // executes the request that comes from the transport
+        public static void executeRequests(string input)
+        {
+
+        }
+
     }
 
     public static class Model
@@ -215,7 +258,7 @@ namespace Data_Structure_for_Graphs
             get;
             set;
         }
-        
+
         public int xLocation
         {
             get;
@@ -296,3 +339,6 @@ namespace Data_Structure_for_Graphs
 
     }
 }
+
+
+
