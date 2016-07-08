@@ -4,14 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Microsoft.Xna.Framework.Game;
+
 
 namespace Data_Structure_for_Graphs
 {
-    //// TO DO:
-    // add simple rendering view
-    // set up access rights, maybe local or something
-
     class Program
     {
         static void Main(string[] args)
@@ -108,14 +104,9 @@ namespace Data_Structure_for_Graphs
     }
 
 
-
+    // unimplemented 
     public static class View
     {
-        public static void startup()
-        {
-            Game game = new Game();
-
-        }
 
     }
 
