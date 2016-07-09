@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace Data_Structure_for_Graphs
 {
+    internal static class NativeMethods
+    {
+        [DllImport("kernel32.dll")]
+        internal static extern Boolean AllocConsole();
+    }
+
     class Program
     {
         static void Main(string[] args)
@@ -72,35 +79,63 @@ namespace Data_Structure_for_Graphs
         // top left corners of each key
         public static Dictionary<char, Tuple<int, int>> dictionaryKeyboardXYLocation = new Dictionary<char, Tuple<int, int>>
         {
- {'q', Tuple.Create(0, 6) },
-            {'w', Tuple.Create(2, 6) },
-            {'e', Tuple.Create(4, 6) },
-            {'r', Tuple.Create(6, 6) },
-            {'t', Tuple.Create(8, 6) },
-            {'y', Tuple.Create(10, 6) },
-            {'u', Tuple.Create(12, 6) },
-            {'i', Tuple.Create(14, 6) },
-            {'o', Tuple.Create(16, 6) },
-            {'p', Tuple.Create(18, 6) },
-            {'a', Tuple.Create(1, 4) },
-            {'s', Tuple.Create(3, 4) },
-            {'d', Tuple.Create(5, 4) },
-            {'f', Tuple.Create(7, 4) },
-            {'g', Tuple.Create(9, 4) },
-            {'h', Tuple.Create(11, 4) },
-            {'j', Tuple.Create(13, 4) },
-            {'k', Tuple.Create(15, 4) },
-            {'l', Tuple.Create(17, 4) },
-            {'z', Tuple.Create(2, 2) },
-            {'x', Tuple.Create(4, 2) },
-            {'c', Tuple.Create(6, 2) },
-            {'v', Tuple.Create(8, 2) },
-            {'b', Tuple.Create(10, 2) },
-            {'n', Tuple.Create(12, 2) },
-            {'m', Tuple.Create(14, 2) }
+            {'q', Tuple.Create(2, 7) },
+            {'w', Tuple.Create(4, 7) },
+            {'e', Tuple.Create(6, 7) },
+            {'r', Tuple.Create(8, 7) },
+            {'t', Tuple.Create(10, 7) },
+            {'y', Tuple.Create(12, 7) },
+            {'u', Tuple.Create(14, 7) },
+            {'i', Tuple.Create(16, 7) },
+            {'o', Tuple.Create(18, 7) },
+            {'p', Tuple.Create(20, 7) },
+            {'a', Tuple.Create(3, 5) },
+            {'s', Tuple.Create(5, 5) },
+            {'d', Tuple.Create(7, 5) },
+            {'f', Tuple.Create(9, 5) },
+            {'g', Tuple.Create(11, 5) },
+            {'h', Tuple.Create(13, 5) },
+            {'j', Tuple.Create(15, 5) },
+            {'k', Tuple.Create(17, 5) },
+            {'l', Tuple.Create(19, 5) },
+            {'z', Tuple.Create(4, 3) },
+            {'x', Tuple.Create(6, 3) },
+            {'c', Tuple.Create(8, 3) },
+            {'v', Tuple.Create(10, 3) },
+            {'b', Tuple.Create(12, 3) },
+            {'n', Tuple.Create(14, 3) },
+            {'m', Tuple.Create(16, 3) }
         };
 
-
+        public static Dictionary<char, string> adjacentDictionary = new Dictionary<char, string>
+        {
+            {'q', "aw" },
+            {'w', "qase"},
+            {'e', "wsdr"},
+            {'r', "edft"},
+            {'t', "rfgy"},
+            {'y',  "tghu"},
+            {'u',  "yhji"},
+            {'i',  "ujko"},
+            {'o',  "iklp"},
+            {'p',  "ol"},
+            {'a', "qwsz"},
+            {'s', "weadzx"},
+            {'d', "ersfxc"},
+            {'f', "rtdgcv"},
+            {'g', "tyfhvb"},
+            {'h',  "yugjbn"},
+            {'j',  "uihknm"},
+            {'k',  "iojlm"},
+            {'l',  "opk"},
+            {'z', "asx"},
+            {'x', "sdzc"},
+            {'c', "dfxv"},
+            {'v', "fgcb"},
+            {'b',  "ghvn"},
+            {'n',  "hjbm"},
+            {'m',  "jkn"}
+        };
     }
 
 
@@ -195,6 +230,17 @@ namespace Data_Structure_for_Graphs
             return true;
         }
 
+        // Maybe this can be improved with a dictionary
+        public static bool isNode(int x, int y)
+        {
+            foreach (var node in Model.nodeList)
+            {
+                if (node.xLocation == x && node.yLocation == y)
+                    return true;
+            }
+            return false;
+        }
+
         // Graph associations, what is attached to each other
         public static List<Edge> selectLinkedEdges(Node queryNode)
         {
@@ -242,7 +288,8 @@ namespace Data_Structure_for_Graphs
                 // if there are an odd number of edge choices or if they don't match a node they will be ignored
                 while (true)
                 {
-                    Console.WriteLine("Please type the letters a to z to create your edges");
+                    Console.WriteLine("Please type the letters a to z to create your edges.");
+                    Console.WriteLine("Edges must be adjacent to the letter (ie. for x choices are zasdc");
                     line = Console.ReadLine().ToLower();
                     if (isStringAllAlphabeticalChars(line))
                         break;
@@ -251,8 +298,10 @@ namespace Data_Structure_for_Graphs
                 int lineLength = line.Length;
                 for (var i = 1; i < lineLength; i += 2)
                 {
-                    // check if the nodes are created before connecting the edges
-                    if (selectNode(line[i - 1].ToString()) != null && selectNode(line[i].ToString()) != null)
+                    // Check if the nodes are created before connecting the edges
+                    // Also check if the nodes are adjacent with the adjacent dictionary.
+                    if (selectNode(line[i - 1].ToString()) != null && selectNode(line[i].ToString()) != null &&
+                        Model.adjacentDictionary[line[i - 1]].Contains(line[i]))
                     {
                         createEdge(String.Concat(line[i - 1].ToString(), line[i].ToString()), "",
                             selectNode(line[i - 1].ToString()), selectNode(line[i].ToString()));
@@ -262,11 +311,8 @@ namespace Data_Structure_for_Graphs
 
             if (System.Text.RegularExpressions.Regex.IsMatch(input, "print graph", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
             {
-                Console.WriteLine("The node list is:");
-                Model.nodeList.ForEach(Console.WriteLine);
-
-                Console.WriteLine("The edge list is:");
-                Model.edgeList.ForEach(Console.WriteLine);
+                Application.EnableVisualStyles();
+                Application.Run(new GraphWind());
             }
 
             //if (input == "comands")
