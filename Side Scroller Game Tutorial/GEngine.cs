@@ -71,7 +71,7 @@ namespace Side_Scroller_Game_Tutorial
                 // Background Color                
                 frameGraphics.FillRectangle(new SolidBrush(Color.Aqua), 0, 0, Game.CANVAS_WIDTH, Game.CANVAS_HEIGHT);
 
-                // 
+                // Draw air and dirt
                 for (int x = 0; x < Game.LEVEL_WIDTH; x++)
                 {
                     for (int y = 0; y < Game.LEVEL_HEIGHT; y++)
